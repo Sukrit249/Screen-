@@ -13,7 +13,7 @@
    <div id="entry-body">
       <ul id="body-list">
         <li class="entry-list" v-for="entry in filteredEntries" :key="entry.id">
-        <span class="entry-daytime">{{entry[0]}}Uhr, {{entry[1].replace("/", ".")}} </span>
+        <span class="entry-daytime"><strong class="entry-daytime">{{entry[0]}}Uhr, {{entry[1].replace("/", ".")}} </strong></span>
         <h3 class="entry-title">{{entry[2]}}</h3>
         <span class="entry-description">{{entry[3]}}</span>
         </li>
@@ -35,7 +35,7 @@ export default {
   name: 'app',
   data() {
     return {
-      gsheet_url: "",
+      gsheet_url: "https://sheets.googleapis.com/v4/spreadsheets/19UVN4MxwzQAf4Hg4f_4vyl8ayttwMOTZoEzPLgtzlzQ/values:batchGet?ranges=A1%3AE100&valueRenderOption=FORMATTED_VALUE&key=AIzaSyD2fAjflA1WgD32AcrmyPxzhh7lNmwarD4",
       title: "Welcome to Opportunity",
       entries: [],
       currentDate:"",
@@ -86,7 +86,7 @@ export default {
 #title{
   font-family: 'Inter', sans-serif;
   color: #2c3e50;
-  font-size: 62px;
+  font-size: 70px;
   margin: 10px;
   padding: 25px;
 }
@@ -95,7 +95,7 @@ export default {
   height: 75px;
   padding: 10px;
   padding-left: 50px;
-  font-size: 50px;
+  font-size: 60px;
   font-family: Inter;
   opacity: 0.5;
   color:black;
@@ -107,21 +107,29 @@ padding: 10px;
   font-family: 'Inter', sans-serif;
   background: #0F05A0;
   color: rgb(245, 210, 157);
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 40px;
 }
 .entry-list{
-  padding: 35px 40px;
+  padding: 20px;
   margin: 25px 0;
   background: #0f05a0;
   font-size: 28px;
   line-height: 1.3;
+  font-family: 'Inter', sans-serif;
+  
+
 }
 .entry-daytime{
   background: #0F05A0;
   color: red;
   font-family: 'Inter', sans-serif;
+  font-size: 40px;
 }
 .entry-description{
   background: #0F05A0;
+  font-size: 35px;
 }
 #body-list{
   font-style: normal;
@@ -134,12 +142,14 @@ padding: 10px;
   bottom: 0;
   width: 100%;
   background: white;
+  
   position: fixed;
   clear:both;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
-  height: 50px;
+  height: 100px;
 }
 /*Images*/
 #Opportunity{
