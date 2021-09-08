@@ -86,36 +86,36 @@ export default {
 #title{
   font-family: 'Inter', sans-serif;
   color: #2c3e50;
-  font-size: 70px;
-  margin: 10px;
-  padding: 25px;
+  font-size: 7vw;
+  margin: 1vw;
+  padding: 2.5vw;
 }
 #currentDates{
-  width: 335px;
-  height: 75px;
-  padding: 10px;
-  padding-left: 50px;
-  font-size: 60px;
+  width: 3.35vw;
+  height: 7.5vw;
+  padding: 1vw;
+  padding-left: 5vw;
+  font-size: 6vw;
   font-family: Inter;
   opacity: 0.5;
   color:black;
 }
 #entry-body{
-padding: 10px;  
+padding: 1vw;  
 }
 .entry-title{
   font-family: 'Inter', sans-serif;
   background: #0F05A0;
   color: rgb(245, 210, 157);
-  margin-top: 20px;
+  margin-top: 2vw;
   margin-bottom: 0;
-  font-size: 40px;
+  font-size: 4vw;
 }
 .entry-list{
-  padding: 20px;
-  margin: 25px 0;
+  padding: 2vw;
+  margin: 2.5vw 0;
   background: #0f05a0;
-  font-size: 28px;
+  font-size: 3vw;
   line-height: 1.3;
   font-family: 'Inter', sans-serif;
   
@@ -125,22 +125,23 @@ padding: 10px;
   background: #0F05A0;
   color: red;
   font-family: 'Inter', sans-serif;
-  font-size: 40px;
+  font-size: 4vw;
 }
 .entry-description{
   background: #0F05A0;
-  font-size: 35px;
+  font-size: 3.5vw;
 }
 #body-list{
+  padding: 0;
   font-style: normal;
-  font-size: 28px;
+  font-size: 2.8vw;
   color: rgb(245, 210, 157);
   list-style: none;
 }
 #entry-footers{ 
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   background: white;
   
   position: fixed;
@@ -149,19 +150,19 @@ padding: 10px;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  height: 100px;
+  height: 10vw;
 }
 /*Images*/
 #Opportunity{
-  width: 296px;
-  height: 55px;
+  width: 29.6vw;
+  height: 5.5vw;
 }
 #SAG{
-  width: 273px;
-  height: 52px;
+  width: 27.3vw;
+  height: 5.2vw;
 }
 #STZH{
-  width: 230px;
-  height: 44px;
+  width: 23vw;
+  height: 4.4vw;
 }
 </style>
