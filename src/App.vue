@@ -8,7 +8,7 @@
       <div id="currentDates">  
         {{currentDate}}
       </div>
-   <div class="entry-body">
+   <div class="entry-body" >
       <ul id="body-list" >
         <li class="entry-list" v-for="entry in filteredEntries" :key="entry.id" >
           <span class="entry-daytime"><strong class="entry-daytime">{{entry[0]}}Uhr, {{entry[1].replace("/", ".")}} </strong></span>
@@ -49,7 +49,7 @@ export default {
         console.log(response);        
       });
     },
-    upbtadeCurrentdate() {
+    updateCurrentdate() {
       let today = new Date();
       const date = `${today.getDate()}.${
         today.getMonth() + 1
@@ -58,7 +58,7 @@ export default {
       },
     refreshData() {
       this.getData();
-      this.upbtadeCurrentdate();
+      this.updateCurrentdate();
     },
   },
   mounted(){
