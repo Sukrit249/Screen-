@@ -15,7 +15,7 @@
           <h3 class="entry-title">{{entry[2]}}</h3>
           <span class="entry-description">{{entry[3]}}</span>
         </li>
-          <p class="entry-list" v-if="entry === 0" :key="entry in filteredEntries" >{{nothing}}</p>
+          <p class="nothing" v-if="filteredEntries.length === 0" >{{nothing}}</p>
       </ul>
     </div>
     <div id="entry-footers">
@@ -42,8 +42,8 @@ export default {
    //computet properties are like data properties, but with a methods combined
     filteredEntries(){
       return [...this.entries].slice(1);
-    }
-  },
+    },
+ },
   methods: {
       getData(){
       axios.get(this.gsheet_url).then((response) => {
@@ -132,18 +132,10 @@ padding: 1vw;
   list-style: none;
 }
 .nothing{
-  width: 3.35vw;
-  height: 7.5vw;
-  padding: 1vw;
-  padding-left: 5vw;
-  font-size: 6vw;
-  font-family: Inter;
-  opacity: 0.5;
-  color:black;
   padding: 2vw;
   margin: 2.5vw 0;
   background: #0f05a0;
-  font-size: 3vw;
+  font-size: 5vw;
   line-height: 1.3;
   font-family: 'Inter', sans-serif;
 }
