@@ -15,6 +15,7 @@
           <h3 class="entry-title">{{entry[2]}}</h3>
           <span class="entry-description">{{entry[3]}}</span>
         </li>
+          <p class="entry-list" v-if="entry === 0" :key="entry in filteredEntries" >{{nothing}}</p>
       </ul>
     </div>
     <div id="entry-footers">
@@ -34,6 +35,7 @@ export default {
       title: "Welcome to Opportunity",
       entries: [],
       currentDate:"",
+      nothing: "Sorry there is nothing to read..."
      }
     }, /*Function*/
  computed: { 
@@ -111,8 +113,6 @@ padding: 1vw;
   font-size: 3vw;
   line-height: 1.3;
   font-family: 'Inter', sans-serif;
-  
-
 }
 .entry-daytime{
   background: #0F05A0;
@@ -153,7 +153,6 @@ padding: 1vw;
   width: 100vw;
   background: white;
   position: fixed;
-  clear:both;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
